@@ -7,11 +7,11 @@ A simple react powered todo type of app. If you find any tips, please share them
 
 ## Installation
 
-`git clone git@github.com:samnorton/remindee/`
-`cd react-todo-app`
-`npm i`
-`npm run start`
-`open localhost:3000`
+`git clone git@github.com:samnorton/remindee/ <br>
+cd react-todo-app <br>
+npm i <br>
+`npm run start <br>
+`open localhost:3000 
 
 ## App Preview
 
