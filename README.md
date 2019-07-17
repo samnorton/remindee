@@ -13,7 +13,7 @@ npm i
 npm run start
 open localhost:3000`
 
-## @ icon-camera App Preview
+## App Preview
 
 Visit https://sn-remindee-app.netlify.com/ for preview of the app.
 
