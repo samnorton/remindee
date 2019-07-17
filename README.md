@@ -15,7 +15,7 @@ open localhost:3000`
 
 ## App Preview
 
-Visit https://sn-remindee-app.netlify.com/ for preview of the app.
+Visit https://sn-remindee-app.netlify.com/ for a preview of the app.
 
 
 
