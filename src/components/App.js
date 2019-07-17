@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import uuid from "uuid";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/App.css";
 import logo from "./remindee_logo.png";
 import RemindeeInput from "./RemindeeInput";
@@ -15,23 +16,47 @@ class App extends Component {
   };
 
   handleChange = e => {
-    console.log("handlechange");
+    this.setState({ item: e.target.value });
   };
 
   handleSubmit = e => {
-    console.log("handleSubmit");
+    e.preventDefault();
+
+    const newItem = {
+      id: this.state.id,
+      title: this.state.item
+    };
+
+    const updatedItems = [...this.state.items, newItem];
+
+    this.setState({
+      items: updatedItems,
+      item: "",
+      id: uuid(),
+      editItem: false
+    });
   };
 
   clearList = () => {
-    console.log("clearList");
+    this.setState({ items: [] });
   };
-
   handleDelete = id => {
-    console.log("handleDelete");
+    const filteredItems = this.state.items.filter(item => item.id !== id);
+
+    this.setState({ items: filteredItems });
   };
 
   handleEdit = id => {
-    console.log("handleEdit");
+    const filteredItems = this.state.items.filter(item => item.id !== id);
+
+    const selectedItem = this.state.items.find(item => item.id === id);
+
+    this.setState({
+      items: filteredItems,
+      item: selectedItem.title,
+      id: id,
+      editItem: true
+    });
   };
 
   render() {
