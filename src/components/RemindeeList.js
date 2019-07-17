@@ -6,12 +6,12 @@ const RemindeeList = props => {
 
   return (
     <ul className="list-group my-5">
-      <h3 className="text-capitalize text-center">Todo List</h3>
+      <h3 className="text-capitalize text-center">Reminder List</h3>
 
       {items.length > 0 ? (
         items.map(item => {
           return (
-            <TodoItem
+            <RemindeeItem
               key={item.id}
               title={item.title}
               handleDelete={() => handleDelete(item.id)}
@@ -20,7 +20,7 @@ const RemindeeList = props => {
           );
         })
       ) : (
-        <h6 className="text-center">No todo added.</h6>
+        <h6 className="text-center">No reminder added.</h6>
       )}
       <button
         type="button"
