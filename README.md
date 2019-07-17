@@ -11,7 +11,8 @@ A simple react powered todo type of app. If you find any tips, please share them
 cd react-todo-app
 npm i
 npm run start
-open localhost:3000 ```
+open localhost:3000
+```
 
 ## App Preview
 
