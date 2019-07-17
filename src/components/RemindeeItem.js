@@ -1,9 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const RemindeeItem = () => {
-    return (<div>
-        <h1>Hello from RemindeeItem</h1>
-    </div>);
+const RemindeeItem = props => {
+  const { title, handleDelete, handleEdit } = props;
+
+  return (
+    <li className="list-group-item text-capitalize d-flex justify-content-between my-2">
+      <h6>{title}</h6>
+      <div className="todo-icon">
+        <span className="mx-2 text-success" onClick={handleEdit}>
+          <i className="fas fa-pen" />
+        </span>
+
+        <span className="mx-2 text-success" onClick={handleDelete}>
+          <i className="fas fa-check-square" />
+        </span>
+      </div>
+    </li>
+  );
 };
 
 export default RemindeeItem;
